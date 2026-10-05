@@ -133,3 +133,13 @@ int main(void)
 
 1. What is the difference between this and just passing the argument in? When can you/can't you use this?
 
+
+## RDKit Applications
+
+### Questions
+1. **Read-only vs. editable molecules.** RDKit has two molecule classes: ROMol (a "read-only" molecule) and RWMol(a "read-write" molecule that allows adding and removing atoms and bonds). Most analysis functions accept a read-only molecule. Computing ring information is slow, so the library computes it once and stores the result inside the molecule. Why is it safer to store results like this in a molecule that can't be changed?
+
+2. **Bonds**. A molecule created in RDKit, for downstream modeling purposes, has to know which bonds are single, double, or aromatic. Why might a library use a named set of choices (SINGLE, DOUBLE, TRIPLE, AROMATIC) rather than storing the bond order as a number? (Hint: "aromatic" isn't really a number, it's a separate category. )
+ 
+3. **One molecule, many shapes**. RDKit stores each molecule's atoms and bonds once. Separately, it stores a list of conformers, each with its own set of 3D coordinates. Why separate the coordinates from the atoms and bonds instead of putting them in one class, as our Molecule does?
+
