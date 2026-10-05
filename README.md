@@ -137,8 +137,12 @@ int main(void)
 ## RDKit Applications
 
 ### Questions
-1. **Read-only vs. editable molecules.** RDKit has two molecule classes: ROMol (a "read-only" molecule) and RWMol(a "read-write" molecule that allows adding and removing atoms and bonds). Most analysis functions accept a read-only molecule. Computing ring information is slow, so the library computes it once and stores the result inside the molecule. Why is it safer to store results like this in a molecule that can't be changed?
+1. **Read-only vs. editable molecules.** RDKit has two molecule classes: ROMol (a "read-only" molecule) and RWMol(a "read-write" molecule that allows adding and removing atoms and bonds). Most analysis functions accept a read-only molecule. Computing ring information is slow, so the library computes it once and stores the result inside the molecule.
+- Why is it safer to store results like this in a molecule that can't be changed?
+- `const` isn't enforceable in Python. How do you think ROMol objects prevent users from, for example, adding additional atoms to the molecule? 
 
-2. **Bonds**. A molecule created in RDKit, for downstream modeling purposes, has to know which bonds are single, double, or aromatic. Why might a library use a named set of choices (SINGLE, DOUBLE, TRIPLE, AROMATIC) rather than storing the bond order as a number? (Hint: "aromatic" isn't really a number, it's a separate category. )
+2. **Bonds**. A molecule created in RDKit, for downstream modeling purposes, has to know which bonds are single, double, or aromatic.
+- Why might a library use a named set of choices (SINGLE, DOUBLE, TRIPLE, AROMATIC) rather than storing the bond order as a number? (Hint: "aromatic" isn't really a number, it's a separate category. )
  
-3. **One molecule, many shapes**. Our `Molecule` class keeps the atoms and the coordinates together. So to store 60 conformers of ibuprofen, you'd need 60 `Molecule` objects, each with its own copy of the same atoms and bonds. RDKit stores the atoms and bonds once, and each conformer holds only its coordinates. Why is RDKit's way better?
+3. **One molecule, many shapes**. Our `Molecule` class keeps the atoms and the coordinates together. So to store 60 conformers of ibuprofen, you'd need 60 `Molecule` objects, each with its own copy of the same atoms and bonds. RDKit stores the atoms and bonds once, and each conformer holds only its coordinates.
+- Why is RDKit's way better? 
