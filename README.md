@@ -1,6 +1,10 @@
 # Week 7 Discussion  
 
 
+[Link to slides](https://docs.google.com/presentation/d/1OapdyKlvJpard0NzeoOSCW_bMbiccTxX2wCC1yJX2Zc/edit?slide=id.g3f9c62c1b5f_0_0#slide=id.g3f9c62c1b5f_0_0).
+Please make a new slide titled with your Group # and answer the questions below.
+
+
 ## C++ Const
 
 Write your text answers in the shared slides for discussion.
