@@ -142,7 +142,7 @@ int main(void)
 - `const` isn't enforceable in Python. How do you think ROMol objects prevent users from, for example, adding additional atoms to the molecule? 
 
 2. **Bonds**. A molecule created in RDKit, for downstream modeling purposes, has to know which bonds are single, double, or aromatic.
-- Why might a library use a named set of choices (SINGLE, DOUBLE, TRIPLE, AROMATIC) rather than storing the bond order as a number? (Hint: "aromatic" isn't really a number, it's a separate category. )
+- Why might a library use a named set of choices (SINGLE, DOUBLE, TRIPLE, AROMATIC) rather than storing the bond order as a number? (Hint: an aromatic bond are those in a ring structure. Is this easily expressed as a numerical value?)
  
 3. **One molecule, many shapes**. Our `Molecule` class keeps the atoms and the coordinates together. So to store 60 conformers of ibuprofen, you'd need 60 `Molecule` objects, each with its own copy of the same atoms and bonds. RDKit stores the atoms and bonds once, and each conformer holds only its coordinates.
 - Why is RDKit's way better? 
