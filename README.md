@@ -132,6 +132,7 @@ int main(void)
 ### Questions
 
 1. What is the difference between this and just passing the argument in? When can you/can't you use this?
+2. (Challenge) In `main.cpp`, add a function that calculates a factorial of a template argument. What would be the advantage/disadvantage of this function?
 
 
 ## RDKit Applications
