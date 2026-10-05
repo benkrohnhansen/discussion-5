@@ -57,6 +57,7 @@ We see `const` used in 3 places:
 3. You can rewrite the first `get_component` function and get rid of one `const`. Which one? Is there a benefit to that?
 4. Is the second `get_component` function a good idea?
 5. How does the compiler know which `get_component` function to use when it is called?
+6. Why is `&` used in both versions of `get_component`? How would the functionality change if that was left out?
 
 
 
