@@ -132,6 +132,5 @@ int main(void)
 ### Questions
 
 1. What is the difference between this and just passing the argument in? When can you/can't you use this?
-2. Can you think of an example where you have seen this already with classes? (Hint: It was a class that is part of the Standard Library).
-3. In `main.cpp`, add a function that calculates a factorial of a template argument. What would be the advantage/disadvantage of this function?
-4. Can you write code that calculates a factorial using no `if` statements or `for` loops using templates? Hint: You need a template specialization of a function.
+2. In `main.cpp`, add a function that calculates a factorial of a template argument. What would be the advantage/disadvantage of this function?
+3. Can you write code that calculates a factorial using no `if` statements or `for` loops using templates? Hint: You need a template specialization of a function.
